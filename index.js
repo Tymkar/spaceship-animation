@@ -30,4 +30,30 @@ function makeMeteor() {
   }
 }
 
+function makeStar() {
+  starCount = 50;
+  j = 0;
+
+  while (j < starCount) {
+    star = document.createElement("i");
+    star.classList.add("meteor");
+    windowX = Math.floor(Math.random() * window.innerWidth);
+
+    duration = Math.random() * 1;
+
+    starWidth = 5;
+    starHeight = 5;
+
+    star.style.left = windowX + "px";
+    star.style.width = starWidth + "px";
+    star.style.height = starHeight + "px";
+    star.style.animationDuration = duration + "s";
+    star.style.borderRadius = "50%";
+
+    container.appendChild(star);
+    j++;
+  }
+}
+
 makeMeteor();
+makeStar();
