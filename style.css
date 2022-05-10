@@ -14,3 +14,35 @@
   background-color: #333;
   overflow: hidden;
 }
+
+.rocket {
+  position: relative;
+  width: 100px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 37.5%;
+}
+
+.rocket i {
+  background: linear-gradient(cyan, #00aaff, #138ed4, #2d36d8);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: absolute;
+  font-size: 6rem;
+  transform: rotate(-90deg);
+  animation: move 0.2s linear infinite;
+  z-index: 1;
+}
+
+@keyframes move {
+  0%,
+  100% {
+    top: 35%;
+  }
+  50% {
+    top: 40%;
+  }
+}
