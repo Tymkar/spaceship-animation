@@ -59,6 +59,14 @@
   z-index: 1;
 }
 
+.container .meteor {
+  position: absolute;
+  top: -250px;
+  background: rgb(255, 255, 255, 0.5);
+  animation: moveDown linear infinite;
+  z-index: 0;
+}
+
 @keyframes move {
   0%,
   100% {
@@ -66,5 +74,14 @@
   }
   50% {
     top: 40%;
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(130vh);
   }
 }
